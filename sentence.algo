@@ -1,0 +1,28 @@
+ALGORITHM sentence
+VAR
+    NB_C , NB_V , NB_W :INTEGER := 0 ;
+    str : STRING
+    i : INTEGER := 0
+BEGIN
+    write("enter the sentence")
+    read(str)
+
+    WHILE ( str(i) != "." ) DO
+           NB_C += 1
+
+        IF ( str(i) in ("a" , "i" , "o" , "u" , "y" , "e") ) THEN
+           NB_V += 1
+        END_IF
+
+        IF ( str(i) = " " ) THEN
+            NB_W += 1
+        END_IF
+     i++
+
+    END_WHILE
+    
+    write(NB_C)
+    write(NB_V)
+    
+    write(NB_W)
+END
